@@ -61,7 +61,7 @@ spec:
     proxy:
       enabled: true
       type: LoadBalancer
-      loadBalancerIP: ""
+      loadBalancerIP: "34.79.90.87"
       annotations:
         # If using https, change the value below
         konghq.com/protocol: "http"
