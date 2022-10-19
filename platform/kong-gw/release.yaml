@@ -17,6 +17,7 @@ spec:
     image:
       repository: kong/kong-gateway
       tag: "2.8-alpine"
+    replicaCount: 2
     env:
       prefix: /kong_prefix/
       database: postgres
