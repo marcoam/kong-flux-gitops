@@ -17,7 +17,7 @@ spec:
     image:
       repository: kong/kong-gateway
       tag: "2.8"
-    replicaCount: 3
+    replicaCount: 1
     env:
       prefix: /kong_prefix/
       database: postgres
