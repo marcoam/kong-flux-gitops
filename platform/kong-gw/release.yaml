@@ -7,7 +7,7 @@ spec:
   chart:
     spec:
       chart: kong
-      version: 2.13.1
+      version: 2.9.1
       sourceRef:
         kind: HelmRepository
         name: kong
@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: kong/kong-gateway
-      tag: "3.0"
+      tag: "2.8"
     replicaCount: 3
     env:
       prefix: /kong_prefix/
@@ -39,13 +39,13 @@ spec:
       # ssl_cert_key: /etc/secrets/kong-proxy-secret/tls.key
 
       # Admin Setting
-      admin_api_uri: http://admin.ucentrics.kongtest.net:8001 
-      admin_gui_url: http://manager.ucentrics.kongtest.net:8002
+      admin_api_uri: http://kong-admin.kongtest.net:8001 
+      admin_gui_url: http://kong-manager.kongtest.net:8002
 
       # Portal Setting
       portal_gui_protocol: http
-      portal_api_url: http://portalapi.ucentrics.kongtest.net:8004
-      portal_gui_host: portal.ucentrics.kongtest.net:8003   
+      portal_api_url: http://kong-portalapi.kongtest.net:8004
+      portal_gui_host: kong-portal.kongtest.net:8003   
       portal_session_conf:
         valueFrom:
           secretKeyRef:
